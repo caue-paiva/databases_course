@@ -1,3 +1,4 @@
+%%sql
 -- Conexão à base de dados
 
 -- Inserção de dados na tabela Localizacao (20 localizações)
@@ -49,8 +50,9 @@ INSERT INTO Usuario (cpf, nome, sobrenome, nascimento, endereco, sexo, telefone,
 ('222.333.444-55', 'Marcos',   'Silveira', '1998-08-20', 'Av. Brasil, 200',        'M', '(21)92222-3333', 'marcos.silveira@email.com',   'senha222', 'ambos', 3),
 ('777.888.999-00', 'Carla',    'Rodrigues', '1992-12-05', 'Rua Afonso Pena, 150',   'F', '(31)97777-8888', 'carla.rodrigues@email.com',  'senha777', 'ambos', 4),
 ('333.444.555-66', 'Beatriz', 'Costa',  '2000-01-15', 'Rua Nova, 100',    'F', '(11)90000-1111', 'beatriz.costa@email.com', 'senha333', 'hospede',  1),
-('444.555.666-77', 'Lucas',   'Pereira','2001-09-10', 'Av. Central, 200',  'M', '(21)90000-2222', 'lucas.pereira@email.com', 'senha444', 'hospede',  2);
-
+('444.555.666-77', 'Lucas',   'Pereira','2001-09-10', 'Av. Central, 200',  'M', '(21)90000-2222', 'lucas.pereira@email.com', 'senha444', 'hospede',  2),
+('111.222.333-44', 'Antônio', 'Vieira', '1950-01-01','Rua Antiga, 10', 'M', '(11)91111-2222','antonio.vieira@email.com', 'senha111','hospede', 1),
+('222.333.444-88', 'Helena', 'Pires', '1960-06-15','Av. Velha, 20', 'F', '(21)92222-3333','helena.pires@email.com', 'senha222','hospede', 2);
 
 
 -- Inserção de dados na tabela Propriedade (20 propriedades)
@@ -119,7 +121,9 @@ INSERT INTO Reserva (cpf_hospede, id_propriedade, data_reserva, checkin, checkou
 ('678.901.234-56', 22, '2025-05-14', '2025-07-20', '2025-07-24', 1, 18.00,  360.00,  378.00, 20.00, 'confirmada'),
 ('333.444.555-66', 22, '2025-05-14', '2025-08-05', '2025-08-08', 2, 24.00,  600.00,  624.00, 50.00, 'confirmada'),
 ('444.555.666-77', 22, '2025-05-15', '2025-09-10', '2025-09-14', 1, 24.00,  480.00,  504.00, 30.00, 'confirmada'),
-('890.456.123-78', 22, '2025-05-15', '2025-10-05', '2025-10-09', 2, 36.00,  800.00,  836.00, 45.00, 'confirmada');
+('890.456.123-78', 22, '2025-05-15', '2025-10-05', '2025-10-09', 2, 36.00,  800.00,  836.00, 45.00, 'confirmada'),
+('111.222.333-44', 1, '2025-05-07','2025-06-01', '2025-06-03', 2,70.00, 700.00, 770.00,50.00, 'confirmada'),
+('222.333.444-88', 2, '2025-05-07','2025-06-10', '2025-06-12', 1,24.00, 240.00, 264.00,40.00, 'confirmada');
 
 
 -- Inserção de dados na tabela Avaliacao (18 avaliações)
