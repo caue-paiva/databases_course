@@ -1,5 +1,5 @@
 -- Conexão à base de dados
-\c plataforma_reservas;
+plataforma_reservas;
 
 -- Inserção de dados na tabela Localizacao (20 localizações)
 INSERT INTO Localizacao (cep, cidade, estado, pais, bairro) VALUES
