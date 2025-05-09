@@ -45,7 +45,11 @@ INSERT INTO Usuario (cpf, nome, sobrenome, nascimento, endereco, sexo, telefone,
 ('789.345.012-67', 'Rafael', 'Moreira', '1974-09-14', 'Av. dos Flamboyants, 640', 'M', '(82) 97891-2345', 'rafael.moreira@email.com', 'senha789r', 'locador', 17),
 ('890.456.123-78', 'Isabela', 'Barros', '1987-05-19', 'Rua dos Jasmins, 150', 'F', '(79) 98902-3456', 'isabela.barros@email.com', 'senha890i', 'hospede', 18),
 ('901.567.234-89', 'Leonardo', 'Cardoso', '1981-12-03', 'Av. das Rosas, 780', NULL, '(95) 99013-4567', 'leonardo.cardoso@email.com', 'senha901l', 'ambos', 19),
-('012.678.345-90', 'Eduarda', 'Ribeiro', '1996-08-16', 'Rua das Violetas, 320', 'F', '(83) 90124-5678', 'eduarda.ribeiro@email.com', 'senha012e', 'hospede', 20);
+('012.678.345-90', 'Eduarda', 'Ribeiro', '1996-08-16', 'Rua das Violetas, 320', 'F', '(83) 90124-5678', 'eduarda.ribeiro@email.com', 'senha012e', 'hospede', 20),
+('555.666.777-88', 'Letícia', 'Alves',    '1995-04-10', 'Rua das Flores, 321',   'F', '(11)95555-6666', 'leticia.alves@email.com',    'senha555', 'ambos', 2),
+('222.333.444-55', 'Marcos',   'Silveira', '1998-08-20', 'Av. Brasil, 200',        'M', '(21)92222-3333', 'marcos.silveira@email.com',   'senha222', 'ambos', 3),
+('777.888.999-00', 'Carla',    'Rodrigues', '1992-12-05', 'Rua Afonso Pena, 150',   'F', '(31)97777-8888', 'carla.rodrigues@email.com',  'senha777', 'ambos', 4);
+
 
 -- Inserção de dados na tabela Propriedade (20 propriedades)
 INSERT INTO Propriedade (tipo, nome, num_quartos, num_banheiros, preco_noite, max_hospedes, min_noites, max_noites, taxa_limpeza, horario_entrada, horario_saida, id_localizacao, cpf) VALUES
@@ -68,7 +72,11 @@ INSERT INTO Propriedade (tipo, nome, num_quartos, num_banheiros, preco_noite, ma
 ('casa inteira', 'Casa na Praia', 3, 2, 380.00, 6, 2, 14, 130.00, '15:00', '11:00', 17, '345.901.678-23'),
 ('quarto individual', 'Quarto com Varanda', 1, 1, 140.00, 2, 1, 10, 55.00, '14:00', '12:00', 18, '567.123.890-45'),
 ('casa inteira', 'Cabana Rústica', 2, 1, 220.00, 4, 2, 7, 75.00, '15:00', '10:00', 19, '789.345.012-67'),
-('quarto individual', 'Quarto com Jardim', 1, 1, 130.00, 2, 1, 14, 50.00, '14:00', '11:00', 20, '567.890.123-45');
+('quarto individual', 'Quarto com Jardim', 1, 1, 130.00, 2, 1, 14, 50.00, '14:00', '11:00', 20, '567.890.123-45'),
+('casa inteira',      'Casa Encantada',  2, 1, 300.00, 4, 2, 7,  80.00, '14:00', '11:00', 2, '555.666.777-88'),
+('quarto individual',  'Suíte Deluxe',   1, 1, 180.00, 2, 1, 10, 60.00, '15:00', '12:00', 3, '222.333.444-55'),
+('casa inteira',      'Chalé Romântico', 1, 1, 250.00, 2, 2, 7,  70.00, '16:00', '10:00', 4, '777.888.999-00');
+
 
 -- Inserção de dados na tabela Reserva (25 reservas)
 INSERT INTO Reserva (cpf_hospede, id_propriedade, data_reserva, checkin, checkout, num_hospedes, imposto, preco_total, preco_total_imposto, taxa_limpeza, status) VALUES
@@ -96,7 +104,10 @@ INSERT INTO Reserva (cpf_hospede, id_propriedade, data_reserva, checkin, checkou
 ('456.789.012-34', 8, '2025-04-20', '2025-09-20', '2025-09-23', 1, 12.00, 300.00, 312.00, 40.00, 'pendente'),
 ('890.123.456-78', 12, '2025-04-25', '2025-10-01', '2025-10-05', 2, 36.00, 720.00, 756.00, 70.00, 'pendente'),
 ('012.345.678-90', 16, '2025-05-01', '2025-10-10', '2025-10-20', 1, 19.50, 650.00, 669.50, 20.00, 'cancelada'),
-('234.567.890-12', 19, '2025-05-05', '2025-10-25', '2025-10-28', 2, 33.00, 660.00, 693.00, 75.00, 'cancelada');
+('234.567.890-12', 19, '2025-05-05', '2025-10-25', '2025-10-28', 2, 33.00, 660.00, 693.00, 75.00, 'cancelada'),
+('555.666.777-88',  2, '2025-05-06', '2025-07-10', '2025-07-15', 2,  24.00,  600.00,  624.00, 50.00, 'confirmada'),
+('222.333.444-55',  3, '2025-05-06', '2025-08-05', '2025-08-10', 2,  56.00, 1400.00, 1456.00, 90.00, 'confirmada'),
+('777.888.999-00',  4, '2025-05-06', '2025-06-01', '2025-06-04', 1,   9.60,  240.00,  249.60, 20.00, 'confirmada');
 
 -- Inserção de dados na tabela Avaliacao (18 avaliações)
 INSERT INTO Avaliacao (fotos, nota_limpeza, nota_estrutura, nota_comunicacao, nota_localizacao, nota_valor, cpf, id_propriedade) VALUES
